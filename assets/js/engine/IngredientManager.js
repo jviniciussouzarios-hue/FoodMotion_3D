@@ -10,7 +10,8 @@ export class IngredientManager {
         this.pizzaBuilder = pizzaBuilder;
         this.toppingsGroup = new THREE.Group();
         this.toppingsGroup.name = "ToppingsGroup";
-        this.scene.add(this.toppingsGroup);
+        // Vincula as coberturas diretamente ao grupo da pizza para escalarem juntas perfeitamente
+        this.pizzaBuilder.pizzaGroup.add(this.toppingsGroup);
 
         // Armazena itens ativos: Array de { id, type, region, mesh }
         this.activeItems = [];

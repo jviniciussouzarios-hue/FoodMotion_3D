@@ -204,9 +204,19 @@ export class PizzaBuilder {
 
     setSize(slices) {
         let scale = 1.0;
-        if (slices === 4) scale = 0.75;
-        else if (slices === 12) scale = 1.25;
+        if (slices === 4) scale = 0.76;
+        else if (slices === 12) scale = 1.24;
 
-        this.pizzaGroup.scale.set(scale, scale, scale);
+        if (window.gsap) {
+            gsap.to(this.pizzaGroup.scale, {
+                x: scale,
+                y: scale,
+                z: scale,
+                duration: 0.55,
+                ease: "back.out(1.4)"
+            });
+        } else {
+            this.pizzaGroup.scale.set(scale, scale, scale);
+        }
     }
 }

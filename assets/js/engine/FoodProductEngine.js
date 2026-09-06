@@ -53,12 +53,12 @@ export class FoodProductEngine {
     }
 
     initLights() {
-        // Luz Ambiente Quente
-        const ambientLight = new THREE.AmbientLight(0xfff7ed, 0.7);
+        // Luz Ambiente Brilhante
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.88);
         this.scene.add(ambientLight);
 
-        // Luz Principal (Key Light com sombras projetadas)
-        const keyLight = new THREE.DirectionalLight(0xffedd5, 1.1);
+        // Luz Principal (Key Light quente com sombras projetadas)
+        const keyLight = new THREE.DirectionalLight(0xfff7ed, 1.25);
         keyLight.position.set(4, 8, 5);
         keyLight.castShadow = true;
         keyLight.shadow.mapSize.width = 1024;
@@ -68,13 +68,13 @@ export class FoodProductEngine {
         keyLight.shadow.bias = -0.001;
         this.scene.add(keyLight);
 
-        // Luz de Preenchimento (Fill Light)
-        const fillLight = new THREE.DirectionalLight(0xf8fafc, 0.45);
+        // Luz de Preenchimento Suave
+        const fillLight = new THREE.DirectionalLight(0xe2e8f0, 0.55);
         fillLight.position.set(-5, 4, -3);
         this.scene.add(fillLight);
 
-        // Luz de Destaque Gastronômica (Warm Rim / Backlight)
-        const rimLight = new THREE.PointLight(0xf59e0b, 0.8, 10);
+        // Luz de Destaque Gastronômica Dourada
+        const rimLight = new THREE.PointLight(0xf59e0b, 0.6, 10);
         rimLight.position.set(0, 3, -3.5);
         this.scene.add(rimLight);
     }

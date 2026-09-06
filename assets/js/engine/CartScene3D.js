@@ -44,21 +44,21 @@ export class CartScene3D {
     }
 
     initLights() {
-        const ambient = new THREE.AmbientLight(0xfff7ed, 0.85);
+        const ambient = new THREE.AmbientLight(0xffffff, 0.95);
         this.scene.add(ambient);
 
-        const key = new THREE.DirectionalLight(0xffedd5, 1.2);
+        const key = new THREE.DirectionalLight(0xfff7ed, 1.3);
         key.position.set(3, 8, 4);
         key.castShadow = true;
         key.shadow.mapSize.width = 1024;
         key.shadow.mapSize.height = 1024;
         this.scene.add(key);
 
-        const fill = new THREE.DirectionalLight(0x94a3b8, 0.45);
+        const fill = new THREE.DirectionalLight(0xe2e8f0, 0.55);
         fill.position.set(-4, 3, -2);
         this.scene.add(fill);
 
-        const warmGlow = new THREE.PointLight(0xf59e0b, 0.9, 8);
+        const warmGlow = new THREE.PointLight(0xf59e0b, 0.7, 8);
         warmGlow.position.set(0, 2.5, -1);
         this.scene.add(warmGlow);
     }
@@ -76,12 +76,12 @@ export class CartScene3D {
     }
 
     buildTableSurface() {
-        // Mesa rústica gastronômica
+        // Mesa rústica gastronômica em carvalho italiano
         const tableGeo = new THREE.CylinderGeometry(4.0, 4.0, 0.16, 48);
         const tableMat = new THREE.MeshStandardMaterial({
-            color: 0x2b180d,
-            roughness: 0.65,
-            metalness: 0.08
+            color: 0x8b5a2b,
+            roughness: 0.55,
+            metalness: 0.05
         });
         const table = new THREE.Mesh(tableGeo, tableMat);
         table.position.y = -0.08;

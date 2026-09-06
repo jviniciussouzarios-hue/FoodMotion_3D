@@ -1,0 +1,23 @@
+# Tasks: FoodMotion 3D
+
+- [ ] **Task 1: Backend & Banco de Dados**
+  - [ ] Criar `database_FoodMotion_3D.sql` com estrutura completa das tabelas `_FoodMotion_3D`.
+  - [ ] Criar `api/config/Database.php` com conexão PDO.
+  - [ ] Criar `api/setup_database_FoodMotion_3D.php` para auto-migração inteligente.
+  - [ ] Criar endpoints `products.php`, `ingredients.php` e `orders.php`.
+- [ ] **Task 2: Motor 3D da Pizza e Ingredientes**
+  - [ ] Implementar `FoodProductEngine.js` com cena, câmera, iluminação de estúdio e loop de render.
+  - [ ] Implementar `PizzaBuilder.js` com massa, bordas (tradicional, catupiry), molho e queijo.
+  - [ ] Implementar `IngredientManager.js` com geometrias procedurais ricas (calabresa, cebola, presunto, azeitona, manjericão, champignon) e animações de queda/subida.
+  - [ ] Implementar lógica de meio a meio (esquerda/direita).
+- [ ] **Task 3: Motor 3D do Carrinho (Combo Pizza + Bebida 3D)**
+  - [ ] Implementar `CartScene3D.js` renderizando a pizza personalizada ao lado de uma lata de refrigerante 3D detalhada com materiais metálicos e reflexos.
+- [ ] **Task 4: Interface UI/UX Gastronômica & Rastreamento**
+  - [ ] Criar `index.php` com vitrine completa do restaurante (cabeçalho com horários/endereço, abas de categorias, lista de itens).
+  - [ ] Criar modal/tela de customização 3D com controle de passos (Tamanho, Massa, Sabores Meio a Meio, Ingredientes adicionais e remoções).
+  - [ ] Criar gaveta/tela do Carrinho 3D com resumo de preços e finalização de pedido.
+  - [ ] Criar tela de Rastreamento de Pedido com stepper/fluxograma visual animado e tempo estimado.
+- [ ] **Task 5: Validação, Testes no Navegador, Git e Documentação Obsidian**
+  - [ ] Validar fluxo de montagem, queda/subida, carrinho 3D e pedido.
+  - [ ] Inicializar Git e fazer commit com formato padronizado.
+  - [ ] Documentar no Segundo Cérebro Obsidian (`01 - Projetos/FoodMotion_3D/`).

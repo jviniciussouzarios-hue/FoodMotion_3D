@@ -343,7 +343,18 @@ class FoodMotionApp {
                 </div>
                 <div class="ing-action-btns">
                     <button class="btn-toggle-ing ${isPresent ? 'active' : 'removed'}">
-                        ${isPresent ? '✓ Presente (Remover)' : '+ Adicionar'}
+                        ${isPresent ? `
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Incluso (Remover)
+                        ` : `
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Adicionar
+                        `}
                     </button>
                 </div>
             `;
@@ -487,7 +498,12 @@ class FoodMotionApp {
             div.innerHTML = `
                 <div class="cart-item-header">
                     <div class="cart-item-title">${item.name}</div>
-                    <button class="btn-remove-item" style="background:none; border:none; color:#ef4444; cursor:pointer; font-size:16px;">✕</button>
+                    <button class="btn-remove-item" style="background:none; border:none; color:#ef4444; cursor:pointer; display:flex; align-items:center; padding:4px;" title="Remover item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
                 <div class="cart-item-details">${item.details}</div>
                 <div class="cart-item-footer">
